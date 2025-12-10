@@ -1,1 +1,14 @@
+[DESCRIÇÃO DA TAREFA]
+Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n) da classe org.apache.commons.math3.primes.Primes.
+
+[RESTRIÇÃO DE ESCOPO]
+Gerar casos de teste apenas para o método nextPrime(int n).
+Não criar testes para outros métodos da classe.
+
+[CONFORMIDADE DOS NOMES DE TESTE]
+Todos os casos de teste devem ter nomes que façam referência explícita ao método nextPrime,
+como por exemplo: testNextPrime_*, nunca utilizando nomes de outros métodos ou termos não relacionados.
+
+[FORMATO DE SAÍDA]
+Forneça apenas o código Java completo e compilável da classe de teste, sem comentários ou explicações adicionais.
 
