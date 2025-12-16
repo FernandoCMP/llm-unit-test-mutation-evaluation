@@ -20,7 +20,6 @@ void testAddPositiveNumbers() {
     assertEquals(8, result);
 }
 
-
 [INSTRUÇÕES]
 Com base APENAS no estilo demonstrado pelo exemplo acima, gere uma classe de teste JUnit 5 completa para o método nextPrime(int n).
 
