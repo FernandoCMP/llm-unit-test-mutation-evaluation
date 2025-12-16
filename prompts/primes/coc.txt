@@ -4,33 +4,39 @@ Você é um engenheiro de software especializado em testes unitários e raciocí
 [2] Definição da tarefa
 Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n) da classe org.apache.commons.math3.primes.Primes.
 
-[3] Estrutura de raciocínio programável (Chain of Code)
-Antes de gerar o código final, realize um raciocínio estruturado em formato de pseudocódigo numerado, intercalando trechos de simulação de código e atualizações de estado intermediário (Estado incremental do raciocínio: ). Esse raciocínio deve refletir a progressão lógica do código-fonte, considerando o fluxo de controle, as decisões condicionais e as interações entre variáveis do método.
+[3] Conformidade dos Nomes de Testes
+Todos os casos de teste devem ter nomes que façam referência explícita ao método nextPrime, como por exemplo: testNextPrime_*, nunca utilizando nomes de outros métodos ou termos não relacionados.
 
-Pergunta: Como derivar casos de teste eficazes para o método nextPrime(int n)?
+[4] Estrutura de raciocínio programável (Chain of Code)
+Antes de gerar o código final, realize um raciocínio estruturado em formato de pseudocódigo numerado, intercalando trechos de simulação de código e atualizações de estado intermediário (Estado incremental do raciocínio:). Esse raciocínio deve refletir a progressão lógica do código-fonte, considerando o fluxo de controle, as decisões condicionais e as interações entre variáveis do método.
 
-1 analisar a estrutura e as decisões condicionais do método
-   Estado incremental do raciocínio: {identificar verificações iniciais, exceções, ajustes de n, laço while e pontos de retorno}
+Pergunta: Como derivar casos de teste relevantes para o método nextPrime(int n)?
 
-2 inferir entradas que percorram caminhos distintos do fluxo de controle
-   Estado incremental do raciocínio: {entradas = inferir_cenarios_a_partir_do_codigo()}
+1. Analisar a estrutura e o fluxo do método,
+   garantindo que cada valor atribuído internamente tenha pelo menos um ponto onde será utilizado.
+   Estado incremental do raciocínio: {verificações iniciais, ajustes internos, decisões condicionais, laços e retornos}
 
-3 simular execuções do método com base nas condições observadas
-   Estado incremental do raciocínio: {atualizar n, simular chamadas a isPrime, registrar os resultados parciais}
+2. Identificar entradas que percorram caminhos distintos do fluxo,
+   permitindo que cada uso importante dessas atribuições seja exercitado pelo menos uma vez.
+   Estado incremental do raciocínio: {escolher entradas que ativem diferentes decisões e cálculos no método}
 
-4 rastrear associações entre definições e usos de variáveis (def-use)
-   Estado incremental do raciocínio: {mapear dependências internas, validar ajustes de n e estimar retornos esperados}
+3. Simular execuções representativas do método,
+   acompanhando como cada valor evolui no fluxo até ser utilizado sem sofrer sobrescrita prematura.
+   Estado incremental do raciocínio: {seguir cada caminho possível até o ponto de uso relevante}
 
-5 derivar categorias de teste representativas
-   Estado incremental do raciocínio: {limites, entradas válidas, múltiplos fluxos do laço, exceções e casos especiais}
+4. Relacionar atribuições internas com seus usos correspondentes,
+   garantindo que os principais caminhos entre esses pontos sejam representados em pelo menos um cenário.
+   Estado incremental do raciocínio: {considerar caminhos diretos, condicionais e com/sem passagem em laços}
 
-6 gerar a classe de teste Java (JUnit 5) cobrindo os caminhos e interações identificados
+5. Derivar categorias de teste que cubram os diferentes comportamentos do método,
+   incluindo verificações iniciais, ajustes, ramificações e caminhos dentro de laços.
+   Estado incremental do raciocínio: {casos típicos, limites, fluxos alternativos e caminhos completos}
+
+6. Gerar a classe de teste Java (JUnit 5) cobrindo os cenários identificados.
    Estado incremental do raciocínio: {classe final de testes gerada}
 
 Resposta: Código Java completo e compilável com os testes unitários.
 
-[4] Geração da suíte de testes (JUnit 5)
-Com base no raciocínio anterior, gere o código Java completo e compilável dos testes unitários em JUnit 5
-que implementem os cenários identificados.
+[5] Geração da suíte de testes (JUnit 5)
+Com base no raciocínio anterior, gere o código Java completo e compilável dos testes unitários em JUnit 5 que implementem os cenários identificados. 
 Não inclua comentários, explicações ou texto fora do código.
-
