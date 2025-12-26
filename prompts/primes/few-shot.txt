@@ -1,41 +1,58 @@
 [DESCRIÇÃO DA TAREFA]
-Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n) da classe org.apache.commons.math3.primes.Primes.
+Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n)
+da classe org.apache.commons.math3.primes.Primes.
 
 [RESTRIÇÃO DE ESCOPO]
 Gerar casos de teste apenas para o método nextPrime(int n).
 Não criar testes para outros métodos da classe.
 
 [CONFORMIDADE DOS NOMES DE TESTE]
-Todos os casos de teste devem ter nomes que façam referência explícita ao método nextPrime,
-como por exemplo: testNextPrime_*, nunca utilizando nomes de outros métodos ou termos não relacionados.
+Todos os casos de teste devem ter nomes que façam referência explícita
+ao método nextPrime, como por exemplo: testNextPrime_*,
+nunca utilizando nomes de outros métodos ou termos não relacionados.
 
-[EXEMPLOS DE CASOS DE TESTE (APENAS MÉTODOS)]
-Use os exemplos abaixo APENAS como referência de estilo, organização e formato de métodos de teste.
-Não reutilize valores, lógica ou comportamento destes exemplos.
+[EXEMPLO DE CLASSE DE TESTE (FEW-SHOT)]
+Use o exemplo abaixo exclusivamente como referência de estrutura,
+organização, imports e formato de uma classe de teste JUnit 5 válida,
+contendo múltiplos casos de teste.
+Não reutilize os valores de entrada, resultados esperados ou a lógica
+dos testes apresentados no exemplo.
 
-======== EXEMPLO 1 ========
-@Test
-void testAddPositiveNumbers() {
-    int result = Calculator.add(5, 3);
-    assertEquals(8, result);
+======== EXEMPLO ========
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+import org.apache.commons.math3.primes.Primes;
+import org.junit.jupiter.api.Test;
+
+public class PrimesFewShotExampleTest {
+
+    @Test
+    void testNextPrimeWithPositiveInput() {
+        int result = Primes.nextPrime(10);
+        assertEquals(11, result);
+    }
+
+    @Test
+    void testNextPrimeWithBoundaryValue() {
+        int result = Primes.nextPrime(1);
+        assertEquals(2, result);
+    }
+
+    @Test
+    void testNextPrimeWithInvalidInputThrowsException() {
+        assertThrows(MathIllegalArgumentException.class,
+            () -> Primes.nextPrime(-1));
+    }
 }
-
-======== EXEMPLO 2 ========
-@Test
-void testReverseSimpleString() {
-    String reversed = StringUtils.reverse("abc");
-    assertEquals("cba", reversed);
-}
-
-======== EXEMPLO 3 ========
-@Test
-void testDivisionByZeroThrows() {
-    assertThrows(ArithmeticException.class, () -> Calculator.divide(10, 0));
-}
+======== FIM DO EXEMPLO ========
 
 [INSTRUÇÕES]
-Com base APENAS no estilo demonstrado pelos exemplos acima, gere uma classe de teste JUnit 5 completa para o método nextPrime(int n).
+Com base no código fornecido da classe Primes e seguindo a estrutura
+demonstrada no exemplo acima, gere uma classe de teste JUnit 5 completa
+para o método nextPrime(int n), incluindo os imports necessários.
 
 [FORMATO DE SAÍDA]
-Forneça apenas o código Java completo e compilável da classe de teste, sem comentários ou explicações adicionais.
-
+Forneça apenas o código Java completo e compilável da classe de teste,
+sem comentários ou explicações adicionais.
