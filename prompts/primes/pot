@@ -1,100 +1,82 @@
 [1] Papel
-Você é um engenheiro de software especializado em testes unitários e critérios de teste estrutural.
+Você é um engenheiro de software especializado em testes unitários e critérios
+de teste estrutural baseados em fluxo de dados.
 
 [2] Tarefa
 Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n).
 Não gerar testes para outros métodos da classe.
 
 [3] Conformidade dos nomes dos casos de testes
-Todos os casos de teste devem ter nomes que façam referência explícita ao método nextPrime,
-como por exemplo: testNextPrime_*, nunca utilizando nomes de outros métodos ou termos não relacionados.
+Todos os casos de teste devem ter nomes que façam referência explícita
+ao método nextPrime, como por exemplo: testNextPrime_*.
 
-[4] Raciocínio Programático (Program of Thoughts)
+[4] Program-of-Thoughts (Plano Estrutural)
 
-Antes de gerar o código final, produza apenas um raciocínio estruturado em comentários iniciados com "#", seguindo as instruções abaixo. 
-Não gere código Java nesta etapa.
+Antes de gerar o código final dos testes, produza um programa de
+raciocínio estrutural que modele explicitamente o comportamento do
+método nextPrime(int n) com base em critérios de fluxo de dados.
 
-IMPORTANTE:
-O raciocínio (#) deve conter apenas texto natural descritivo.
-Nunca escreva código, pseudocódigo, blocos ```java, assinaturas de métodos, chaves { }, ; ou qualquer estrutura que pareça código.
-Somente descreva a lógica, caminhos, critérios e justificativas em linguagem natural.
+Esse programa de pensamentos deve ser representado exclusivamente
+por um objeto JSON válido.
 
-[4.1] Aplicação de Critérios de Fluxo de Dados
+O JSON deve capturar:
+- variáveis relevantes do método;
+- definições de variáveis (All-Defs);
+- usos computacionais (c-use) e predicativos (p-use);
+- pares definição–uso (All-Uses);
+- caminhos definição–uso relevantes (DU-Paths);
+- mapeamento explícito entre caminhos e casos de teste planejados.
 
-# As análises a seguir consideram explicitamente as variáveis n (parâmetro do método)
-# e rem (variável local), utilizando linhas lógicas correspondentes à ordem semântica
-# das instruções no método nextPrime.
+Nesta etapa:
+- NÃO escreva código Java;
+- NÃO escreva texto explicativo fora do JSON;
+- NÃO utilize comentários;
+- NÃO gere ainda os casos de teste.
 
-# All-Defs (Definição de Variáveis)
+[4.1] Estrutura esperada do Program-of-Thoughts (JSON)
 
-# Variável n:
-# - Def: n é definido na entrada do método como parâmetro formal.
-# - Def: n é redefinido pela expressão n | 1, que ajusta seu valor para um número ímpar.
-# - Def: n é redefinido pelas expressões aritméticas n += 2 e n += 4, utilizadas no ajuste inicial
-#   e no corpo do laço while para avançar a busca por números primos.
-# Para cada definição de n, existe ao menos um caminho de execução em que o valor definido
-# é posteriormente utilizado em uma expressão condicional, computacional ou retorno do método,
-# sem que ocorra nova redefinição antes desse uso.
+O programa de pensamentos deve seguir a estrutura abaixo:
 
-# Variável rem:
-# - Def: rem é definido pela expressão n % 3.
-# A definição de rem alcança ao menos um uso válido em uma expressão condicional do método,
-# sem que ocorra redefinição antes desse uso.
-
-# All-Uses (Uso de Variáveis)
-
-# Variável n:
-# - p-use: n é usado em expressões condicionais para decisão de fluxo (n < 0, n == 2, n == 1).
-# - c-use: n é usado em expressões computacionais, incluindo:
-#   * operação bitwise (n | 1),
-#   * cálculo do resto (n % 3),
-#   * incrementos aritméticos (n += 2, n += 4),
-#   * chamadas de método (isPrime(n)).
-# Para cada definição de n, gere casos de teste que percorram caminhos de execução
-# nos quais o valor definido alcance pelo menos um uso predicativo e/ou um uso computacional, quando aplicável,
-# sem que ocorra redefinição intermediária entre a definição e o uso exercitado.
-
-# Variável rem:
-# - p-use: rem é usado exclusivamente em expressões condicionais (rem == 0, rem == 1)
-#   que controlam o fluxo e determinam redefinições subsequentes de n.
-# A definição de rem deve alcançar todos os seus usos predicativos,
-# sem redefinição intermediária.
-
-# Gere casos de teste que assegurem que todos os pares definição–uso
-# (def → p-use e def → c-use, quando aplicável)
-# sejam exercitados ao menos uma vez no fluxo de execução do método.
-
-# All DU-Paths (Caminhos Definição–Uso)
-
-# Variável n:
-# - A definição inicial de n (parâmetro de entrada) deve alcançar usos em caminhos distintos,
-#   incluindo:
-#   * caminhos com retorno imediato (verificações iniciais),
-#   * caminhos que passam pelo ajuste para número ímpar (n | 1),
-#   * caminhos que alcançam verificações de primalidade antes da entrada no laço.
-# - As redefinições de n realizadas pelas expressões n | 1, n += 2 e n += 4 devem alcançar usos
-#   subsequentes em verificações de primalidade e possíveis retornos,
-#   garantindo que não haja redefinição intermediária entre a definição e o uso considerado.
-# - Devem ser exercitados caminhos que:
-#   * terminam antes do laço while,
-#   * entram no laço e retornam na primeira verificação,
-#   * percorrem ao menos uma iteração completa do laço, cobrindo redefinições sucessivas de n.
-
-# Variável rem:
-# - A definição de rem (n % 3) deve alcançar seus usos em caminhos condicionais alternativos,
-#   contemplando os casos em que:
-#   * o fluxo segue o ramo rem == 0,
-#   * o fluxo segue o ramo rem == 1,
-#   * o fluxo não executa nenhum dos ramos condicionais.
-# - Em todos os caminhos considerados, a definição de rem deve alcançar o uso correspondente
-#   sem redefinição intermediária.
-
-# Gere casos de teste que percorram todos os caminhos relevantes de definição para uso,
-# evitando redefinições intermediárias, e garantindo cobertura representativa
-# tanto fora quanto dentro do laço while(true), sem necessidade de enumerar todos
-# os caminhos possíveis do laço.
-
+{
+  "variables": [
+    { "name": "n", "role": "parâmetro" },
+    { "name": "rem", "role": "variável local" }
+  ],
+  "definitions": [
+    { "id": "D1", "variable": "n", "description": "definição como parâmetro formal" },
+    { "id": "D2", "variable": "n", "description": "redefinição por n | 1" },
+    { "id": "D3", "variable": "n", "description": "redefinições por n += 2 e n += 4" },
+    { "id": "D4", "variable": "rem", "description": "definição por n % 3" }
+  ],
+  "uses": [
+    { "id": "U1", "variable": "n", "type": "p-use", "description": "condições iniciais" },
+    { "id": "U2", "variable": "n", "type": "c-use", "description": "isPrime(n) e cálculos" },
+    { "id": "U3", "variable": "rem", "type": "p-use", "description": "condições rem == 0 e rem == 1" }
+  ],
+  "du_paths": [
+    { "id": "P1", "description": "retorno imediato antes do laço" },
+    { "id": "P2", "description": "entrada no laço e retorno na primeira verificação" },
+    { "id": "P3", "description": "execução de ao menos uma iteração completa do laço" }
+  ],
+  "planned_tests": [
+    { "test_id": "T1", "covers": ["P1"] },
+    { "test_id": "T2", "covers": ["P2"] },
+    { "test_id": "T3", "covers": ["P3"] }
+  ],
+  "constraints": {
+    "no_intermediate_redefinition": true,
+    "all_defs_covered": true,
+    "all_uses_covered": true,
+    "representative_loop_coverage": true
+  }
+}
 
 [5] Geração do Código Final (JUnit 5)
-Agora gere apenas o código Java completo e compilável da classe de teste.
-Não inclua comentários, explicações ou texto fora do código.
+
+Com base exclusivamente no Program-of-Thoughts definido na etapa anterior,
+gere apenas o código Java completo e compilável da classe de teste JUnit 5
+para o método nextPrime(int n).
+
+Requisitos:
+- Cada método de teste deve corresponder a um item de "planned_tests";
+- Não inclua comentários, explicações ou texto fora do código Java.
