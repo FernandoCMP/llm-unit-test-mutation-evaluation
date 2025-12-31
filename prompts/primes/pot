@@ -10,13 +10,13 @@ Não gerar testes para outros métodos da classe.
 Todos os casos de teste devem ter nomes que façam referência explícita
 ao método nextPrime, como por exemplo: testNextPrime_*.
 
-[4] Program-of-Thoughts (Plano Estrutural)
+[4] Program-of-Thoughts 
 
 Antes de gerar o código final dos testes, produza um programa de
 raciocínio estrutural que modele explicitamente o comportamento do
 método nextPrime(int n) com base em critérios de fluxo de dados.
 
-Esse programa de pensamentos deve ser representado exclusivamente
+Esse programa programa de raciocínio estrutural deve ser representado exclusivamente
 por um objeto JSON válido.
 
 O JSON deve capturar:
@@ -35,8 +35,6 @@ Nesta etapa:
 
 [4.1] Estrutura esperada do Program-of-Thoughts (JSON)
 
-O programa de pensamentos deve seguir a estrutura abaixo:
-
 {
   "variables": [
     { "name": "n", "role": "parâmetro" },
@@ -49,19 +47,33 @@ O programa de pensamentos deve seguir a estrutura abaixo:
     { "id": "D4", "variable": "rem", "description": "definição por n % 3" }
   ],
   "uses": [
-    { "id": "U1", "variable": "n", "type": "p-use", "description": "condições iniciais" },
-    { "id": "U2", "variable": "n", "type": "c-use", "description": "isPrime(n) e cálculos" },
+    { "id": "U1", "variable": "n", "type": "p-use", "description": "condições iniciais (n < 0, n == 2, n == 1)" },
+    { "id": "U2", "variable": "n", "type": "c-use", "description": "chamadas isPrime(n) e cálculos aritméticos" },
     { "id": "U3", "variable": "rem", "type": "p-use", "description": "condições rem == 0 e rem == 1" }
   ],
   "du_paths": [
-    { "id": "P1", "description": "retorno imediato antes do laço" },
-    { "id": "P2", "description": "entrada no laço e retorno na primeira verificação" },
-    { "id": "P3", "description": "execução de ao menos uma iteração completa do laço" }
+    { "id": "P0", "description": "Exceção lançada para n < 0" },
+    { "id": "P1", "description": "Retorno imediato para n == 2" },
+    { "id": "P2", "description": "Retorno imediato para n == 1 após ajuste n | 1" },
+    { "id": "P3", "description": "Retorno imediato quando isPrime(n) é verdadeiro antes do laço" },
+    { "id": "P4", "description": "Ajuste inicial com rem == 0 (n += 2) antes do laço" },
+    { "id": "P5", "description": "Ajuste inicial com rem == 1 (n += 4) antes do laço" },
+    { "id": "P6", "description": "Entrada no laço sem ajuste inicial (rem == 2)" },
+    { "id": "P7", "description": "Retorno na primeira verificação de isPrime(n) dentro do laço" },
+    { "id": "P8", "description": "Retorno na segunda verificação após n += 2 dentro do laço" },
+    { "id": "P9", "description": "Iteração completa do laço com n += 2 e n += 4 antes do retorno" }
   ],
   "planned_tests": [
+    { "test_id": "T0", "covers": ["P0"] },
     { "test_id": "T1", "covers": ["P1"] },
     { "test_id": "T2", "covers": ["P2"] },
-    { "test_id": "T3", "covers": ["P3"] }
+    { "test_id": "T3", "covers": ["P3"] },
+    { "test_id": "T4", "covers": ["P4"] },
+    { "test_id": "T5", "covers": ["P5"] },
+    { "test_id": "T6", "covers": ["P6"] },
+    { "test_id": "T7", "covers": ["P7"] },
+    { "test_id": "T8", "covers": ["P8"] },
+    { "test_id": "T9", "covers": ["P9"] }
   ],
   "constraints": {
     "no_intermediate_redefinition": true,
