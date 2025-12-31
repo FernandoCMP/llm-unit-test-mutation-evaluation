@@ -89,6 +89,6 @@ Com base exclusivamente no Program-of-Thoughts definido na etapa anterior,
 gere apenas o código Java completo e compilável da classe de teste JUnit 5
 para o método nextPrime(int n).
 
-Requisitos:
+[6] Requisitos:
 - Os casos de teste devem garantir cobertura de todos os caminhos definidos em "planned_tests", sem limitar a quantidade total de testes gerados;
 - Não inclua comentários, explicações ou texto fora do código Java.
