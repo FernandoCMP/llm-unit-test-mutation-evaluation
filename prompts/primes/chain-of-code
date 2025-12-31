@@ -1,12 +1,16 @@
 [1] Papel
-Você é um engenheiro de software especializado em testes unitários e critérios
-de teste estrutural baseados em fluxo de dados.
+
+Você é um engenheiro de software especializado em testes unitários e critérios de teste estrutural baseados em fluxo de dados.
 
 [2] Tarefa
-Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n).
-Não gerar testes para outros métodos da classe.
 
-[3] Convenções do Chain of Code
+Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n).Não gerar testes para outros métodos da classe.
+
+[3] Restrição de Escopo
+
+Gerar casos de teste apenas para o método nextPrime(int n). Não criar testes para outros métodos da classe.
+
+[4] Convenções do Chain of Code
 
 As seguintes convenções devem ser utilizadas e respeitadas durante
 o raciocínio em Chain of Code:
@@ -19,7 +23,7 @@ o raciocínio em Chain of Code:
 - D1, D2, ... identificam definições distintas;
 - P0, P1, ... identificam caminhos distintos.
 
-[4] Chain of Code 
+[5] Chain of Code 
 
 Questão: Como o método nextPrime(int n) se comporta para diferentes valores de entrada?
 
@@ -97,15 +101,13 @@ Questão: Como o método nextPrime(int n) se comporta para diferentes valores de
 
 Resposta: unit_test_scenarios
 
-[5] Geração do Código Final (JUnit 5)
+[6] Geração do Código Final (JUnit 5)
 
-Com base exclusivamente no raciocínio em Chain of Code acima,
-gere o código Java completo e compilável da classe de testes
-JUnit 5 para o método nextPrime(int n).
+Com base exclusivamente no raciocínio em Chain of Code acima, gere o código Java completo e compilável da classe de testes JUnit 5 para o método nextPrime(int n).
 
 [6] Requisitos
 
-[6.1] A classe de teste não deve conter comentários, explicações ou texto fora do código Java.
-[6.2] Todos os casos de teste devem possuir nomes que façam referência explícita ao método nextPrime, seguindo o padrão: testNextPrime_*.
+- Não incluir comentários, explicações ou texto fora do código Java;
+- Todos os casos de teste devem possuir nomes que façam referência explícita ao método nextPrime, seguindo o padrão: testNextPrime_*.
 
 
