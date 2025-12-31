@@ -1,42 +1,111 @@
-[1] Contextualização do papel do modelo
-Você é um engenheiro de software especializado em testes unitários e raciocínio estruturado com base em código.
+[1] Papel
+Você é um engenheiro de software especializado em testes unitários e critérios
+de teste estrutural baseados em fluxo de dados.
 
-[2] Definição da tarefa
-Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n) da classe org.apache.commons.math3.primes.Primes.
+[2] Tarefa
+Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n).
+Não gerar testes para outros métodos da classe.
 
-[3] Conformidade dos Nomes de Testes
-Todos os casos de teste devem ter nomes que façam referência explícita ao método nextPrime, como por exemplo: testNextPrime_*, nunca utilizando nomes de outros métodos ou termos não relacionados.
+[3] Convenções do Chain of Code
 
-[4] Estrutura de raciocínio programável (Chain of Code)
-Antes de gerar o código final, realize um raciocínio estruturado em formato de pseudocódigo numerado, intercalando trechos de simulação de código e atualizações de estado intermediário (Estado incremental do raciocínio:). Esse raciocínio deve refletir a progressão lógica do código-fonte, considerando o fluxo de controle, as decisões condicionais e as interações entre variáveis do método.
+As seguintes convenções devem ser utilizadas e respeitadas durante
+o raciocínio em Chain of Code:
 
-Pergunta: Como derivar casos de teste relevantes para o método nextPrime(int n)?
+- delta state representa o estado atualizado após a execução da instrução corrente;
+- def identifica uma definição de variável;
+- p_use identifica um uso predicativo;
+- c_use identifica um uso computacional;
+- path identifica um caminho lógico de execução;
+- D1, D2, ... identificam definições distintas;
+- P0, P1, ... identificam caminhos distintos.
 
-1. Analisar a estrutura e o fluxo do método,
-   garantindo que cada valor atribuído internamente tenha pelo menos um ponto onde será utilizado.
-   Estado incremental do raciocínio: {verificações iniciais, ajustes internos, decisões condicionais, laços e retornos}
+[4] Chain of Code 
 
-2. Identificar entradas que percorram caminhos distintos do fluxo,
-   permitindo que cada uso importante dessas atribuições seja exercitado pelo menos uma vez.
-   Estado incremental do raciocínio: {escolher entradas que ativem diferentes decisões e cálculos no método}
+Questão: Como o método nextPrime(int n) se comporta para diferentes valores de entrada?
 
-3. Simular execuções representativas do método,
-   acompanhando como cada valor evolui no fluxo até ser utilizado sem sofrer sobrescrita prematura.
-   Estado incremental do raciocínio: {seguir cada caminho possível até o ponto de uso relevante}
+1   n = input_n
+    delta state: { n = input_n, def = D1 }
 
-4. Relacionar atribuições internas com seus usos correspondentes,
-   garantindo que os principais caminhos entre esses pontos sejam representados em pelo menos um cenário.
-   Estado incremental do raciocínio: {considerar caminhos diretos, condicionais e com/sem passagem em laços}
+2   cond_neg = (n < 0)
+    delta state: { n = input_n, p_use = (n < 0) }
 
-5. Derivar categorias de teste que cubram os diferentes comportamentos do método,
-   incluindo verificações iniciais, ajustes, ramificações e caminhos dentro de laços.
-   Estado incremental do raciocínio: {casos típicos, limites, fluxos alternativos e caminhos completos}
+3   if cond_neg:
+        exception_thrown = true
+    delta state: { path = P0 }
 
-6. Gerar a classe de teste Java (JUnit 5) cobrindo os cenários identificados.
-   Estado incremental do raciocínio: {classe final de testes gerada}
+4   cond_two = (n == 2)
+    delta state: { n = input_n, p_use = (n == 2) }
 
-Resposta: Código Java completo e compilável com os testes unitários.
+5   if cond_two:
+        return_value = 2
+    delta state: { path = P1, return_value = 2 }
 
-[5] Geração da suíte de testes (JUnit 5)
-Com base no raciocínio anterior, gere o código Java completo e compilável dos testes unitários em JUnit 5 que implementem os cenários identificados. 
-Não inclua comentários, explicações ou texto fora do código.
+6   n = n | 1
+    delta state: { n = odd(n), def = D2, c_use = (n | 1) }
+
+7   cond_one = (n == 1)
+    delta state: { n = odd(n), p_use = (n == 1) }
+
+8   if cond_one:
+        return_value = 2
+    delta state: { path = P2, return_value = 2 }
+
+9   prime_pre_loop = isPrime(n)
+    delta state: { n = odd(n), c_use = isPrime(n) }
+
+10  if prime_pre_loop:
+        return_value = n
+    delta state: { path = P3, return_value = n }
+
+11  rem = n % 3
+    delta state: { rem = n % 3, def = D4, c_use = (n % 3) }
+
+12  if rem == 0:
+        n = n + 2
+    delta state: { n = n + 2, def = D3, p_use = (rem == 0), path = P4 }
+
+13  if rem == 1:
+        n = n + 4
+    delta state: { n = n + 4, def = D3, p_use = (rem == 1), path = P5 }
+
+14  while true:
+        prime_loop = isPrime(n)
+    delta state: { n = current, c_use = isPrime(n) }
+
+15      if prime_loop:
+            return_value = n
+    delta state: { path = P7, return_value = n }
+
+16      n = n + 2
+    delta state: { n = n + 2, def = D3 }
+
+17      prime_after_inc = isPrime(n)
+    delta state: { n = n + 2, c_use = isPrime(n) }
+
+18      if prime_after_inc:
+            return_value = n
+    delta state: { path = P8, return_value = n }
+
+19      n = n + 4
+    delta state: { n = n + 4, def = D3 }
+
+20      continue
+    delta state: { path = P9 }
+
+21  unit_test_scenarios = derive_from_paths(P0, P1, P2, P3, P4, P5, P7, P8, P9)
+    delta state: { unit_test_scenarios = complete }
+
+Resposta: unit_test_scenarios
+
+[5] Geração do Código Final (JUnit 5)
+
+Com base exclusivamente no raciocínio em Chain of Code acima,
+gere o código Java completo e compilável da classe de testes
+JUnit 5 para o método nextPrime(int n).
+
+[6] Requisitos
+
+[6.1] A classe de teste não deve conter comentários, explicações ou texto fora do código Java.
+[6.2] Todos os casos de teste devem possuir nomes que façam referência explícita ao método nextPrime, seguindo o padrão: testNextPrime_*.
+
+
