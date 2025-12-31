@@ -12,92 +12,100 @@ Gerar casos de teste apenas para o método nextPrime(int n). Não criar testes p
 
 [4] Convenções do Chain of Code
 
-As seguintes convenções devem ser utilizadas e respeitadas durante
-o raciocínio em Chain of Code:
+As seguintes convenções devem ser utilizadas e respeitadas durante o raciocínio em Chain of Code:
 
-- delta state representa o estado atualizado após a execução da instrução corrente;
+- delta_state representa o estado atualizado após a execução da instrução corrente;
 - def identifica uma definição de variável;
 - p_use identifica um uso predicativo;
 - c_use identifica um uso computacional;
 - path identifica um caminho lógico de execução;
 - D1, D2, ... identificam definições distintas;
-- P0, P1, ... identificam caminhos distintos.
+- P0, P1, ... identificam caminhos distintos;
+- input_n representa o valor de entrada original do método e define o contrato observável;
+- return_candidate representa um valor intermediário elegível ao retorno, condicionado ao caminho;
+- observable_return representa o valor efetivamente retornado pelo método para input_n.
 
 [5] Chain of Code 
 
 Questão: Como o método nextPrime(int n) se comporta para diferentes valores de entrada?
 
-1   n = input_n
-    delta state: { n = input_n, def = D1 }
+1   input_n = original_input
+    n = input_n
+    delta_state: { input_n = original_input, n = input_n, def = D1 }
 
 2   cond_neg = (n < 0)
-    delta state: { n = input_n, p_use = (n < 0) }
+    delta_state: { n = input_n, p_use = (n < 0) }
 
 3   if cond_neg:
         exception_thrown = true
-    delta state: { path = P0 }
+    delta_state: { path = P0 }
 
 4   cond_two = (n == 2)
-    delta state: { n = input_n, p_use = (n == 2) }
+    delta_state: { n = input_n, p_use = (n == 2) }
 
 5   if cond_two:
-        return_value = 2
-    delta state: { path = P1, return_value = 2 }
+        return_candidate = 2
+    delta_state: { path = P1, return_candidate = 2 }
 
 6   n = n | 1
-    delta state: { n = odd(n), def = D2, c_use = (n | 1) }
+    delta_state: { n = odd(n), def = D2, c_use = (n | 1) }
 
 7   cond_one = (n == 1)
-    delta state: { n = odd(n), p_use = (n == 1) }
+    delta_state: { n = odd(n), p_use = (n == 1) }
 
 8   if cond_one:
-        return_value = 2
-    delta state: { path = P2, return_value = 2 }
+        return_candidate = 2
+    delta_state: { path = P2, return_candidate = 2 }
 
 9   prime_pre_loop = isPrime(n)
-    delta state: { n = odd(n), c_use = isPrime(n) }
+    delta_state: { n = odd(n), c_use = isPrime(n) }
 
 10  if prime_pre_loop:
-        return_value = n
-    delta state: { path = P3, return_value = n }
+        return_candidate = n
+    delta_state: { path = P3, return_candidate = n }
 
 11  rem = n % 3
-    delta state: { rem = n % 3, def = D4, c_use = (n % 3) }
+    delta_state: { rem = n % 3, def = D4, c_use = (n % 3) }
 
 12  if rem == 0:
         n = n + 2
-    delta state: { n = n + 2, def = D3, p_use = (rem == 0), path = P4 }
+    delta_state: { n = n + 2, def = D3, p_use = (rem == 0), path = P4 }
 
 13  if rem == 1:
         n = n + 4
-    delta state: { n = n + 4, def = D3, p_use = (rem == 1), path = P5 }
+    delta_state: { n = n + 4, def = D3, p_use = (rem == 1), path = P5 }
 
 14  while true:
         prime_loop = isPrime(n)
-    delta state: { n = current, c_use = isPrime(n) }
+    delta_state: { n = current, c_use = isPrime(n) }
 
 15      if prime_loop:
-            return_value = n
-    delta state: { path = P7, return_value = n }
+            return_candidate = n
+        delta_state: { path = P7, return_candidate = n }
 
 16      n = n + 2
-    delta state: { n = n + 2, def = D3 }
+        delta_state: { n = n + 2, def = D3 }
 
 17      prime_after_inc = isPrime(n)
-    delta state: { n = n + 2, c_use = isPrime(n) }
+        delta_state: { n = n + 2, c_use = isPrime(n) }
 
 18      if prime_after_inc:
-            return_value = n
-    delta state: { path = P8, return_value = n }
+            return_candidate = n
+        delta_state: { path = P8, return_candidate = n }
 
 19      n = n + 4
-    delta state: { n = n + 4, def = D3 }
+        delta_state: { n = n + 4, def = D3 }
 
 20      continue
-    delta state: { path = P9 }
+        delta_state: { path = P9 }
 
-21  unit_test_scenarios = derive_from_paths(P0, P1, P2, P3, P4, P5, P7, P8, P9)
-    delta state: { unit_test_scenarios = complete }
+21  unit_test_scenarios = derive_from_paths(
+        P0, P1, P2, P3, P4, P5, P7, P8, P9
+    )
+    delta_state: { unit_test_scenarios = complete }
+
+22  observable_return = nextPrime(input_n)
+    delta_state: { observable_return = return_candidate }
 
 Resposta: unit_test_scenarios
 
@@ -105,7 +113,7 @@ Resposta: unit_test_scenarios
 
 Com base exclusivamente no raciocínio em Chain of Code acima, gere o código Java completo e compilável da classe de testes JUnit 5 para o método nextPrime(int n).
 
-[6] Requisitos
+[7] Requisitos
 
 - Não incluir comentários, explicações ou texto fora do código Java;
 - Todos os casos de teste devem possuir nomes que façam referência explícita ao método nextPrime, seguindo o padrão: testNextPrime_*.
