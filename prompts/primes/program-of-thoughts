@@ -6,11 +6,7 @@ de teste estrutural baseados em fluxo de dados.
 Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n).
 Não gerar testes para outros métodos da classe.
 
-[3] Conformidade dos nomes dos casos de testes
-Todos os casos de teste devem ter nomes que façam referência explícita
-ao método nextPrime, como por exemplo: testNextPrime_*.
-
-[4] Program-of-Thoughts 
+[3] Program-of-Thoughts 
 
 Antes de gerar o código final dos testes, produza um programa de
 raciocínio estrutural que modele explicitamente o comportamento do
@@ -33,7 +29,7 @@ Nesta etapa:
 - NÃO utilize comentários;
 - NÃO gere ainda os casos de teste.
 
-[4.1] Estrutura esperada do Program-of-Thoughts (JSON)
+[3.1] Estrutura esperada do Program-of-Thoughts (JSON)
 
 {
   "variables": [
@@ -83,12 +79,14 @@ Nesta etapa:
   }
 }
 
-[5] Geração do Código Final (JUnit 5)
+[4] Geração do Código Final (JUnit 5)
 
 Com base exclusivamente no Program-of-Thoughts definido na etapa anterior,
 gere apenas o código Java completo e compilável da classe de teste JUnit 5
 para o método nextPrime(int n).
 
-[6] Requisitos:
-- Os casos de teste devem garantir cobertura de todos os caminhos definidos em "planned_tests", sem limitar a quantidade total de testes gerados;
-- Não inclua comentários, explicações ou texto fora do código Java.
+[5] Requisitos
+
+[5.1] Os casos de teste devem garantir cobertura de todos os caminhos definidos em "planned_tests", sem limitar a quantidade total de testes gerados;
+[5.2] Não inclua comentários, explicações ou texto fora do código Java.
+[5.3] Todos os casos de teste devem ter nomes que façam referência explícita ao método nextPrime, como por exemplo: testNextPrime_*.
