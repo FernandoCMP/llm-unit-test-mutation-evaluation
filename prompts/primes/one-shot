@@ -1,22 +1,21 @@
-[DESCRIÇÃO DA TAREFA]
+[1] Tarefa
 Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n)
 da classe org.apache.commons.math3.primes.Primes.
 
-[RESTRIÇÃO DE ESCOPO]
+[2] Restrição de Escopo
 Gerar casos de teste apenas para o método nextPrime(int n).
 Não criar testes para outros métodos da classe.
 
-[CONFORMIDADE DOS NOMES DE TESTE]
-Todos os casos de teste devem ter nomes que façam referência explícita
-ao método nextPrime, como por exemplo: testNextPrime_*.
+[3] Exemplo de Classe de Teste (One-Shot)
 
-[EXEMPLO DE CLASSE DE TESTE (ONE-SHOT)]
-Use o exemplo abaixo exclusivamente como referência de estrutura,
-organização, imports e formato de uma classe de teste JUnit 5 válida.
-Não reutilize os valores de entrada, resultados esperados ou a lógica
-do teste apresentado no exemplo.
+Use o exemplo abaixo apenas como referência de estrutura,
+organização, imports e formato de uma classe de teste JUnit 5.
 
-======== EXEMPLO ========
+Não reutilize valores de entrada, resultados esperados
+ou a lógica do teste apresentado.
+
+// Exemplo
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.apache.commons.math3.primes.Primes;
 import org.junit.jupiter.api.Test;
@@ -25,18 +24,15 @@ public class PrimesOneShotExampleTest {
 
     @Test
     void testNextPrimeExample() {
-        int result = Primes.nextPrime(10);
-        assertEquals(11, result);
+        assertEquals(11, Primes.nextPrime(10));
     }
 }
 
-======== FIM DO EXEMPLO ========
+// Fim do Exemplo
 
-[INSTRUÇÕES]
-Com base no código fornecido da classe Primes e seguindo a estrutura
-demonstrada no exemplo acima, gere uma classe de teste JUnit 5 completa
-para o método nextPrime(int n), incluindo os imports necessários.
+[4] Geração do Código Final (JUnit 5)
+Forneça apenas o código Java completo e compilável da classe de teste.
 
-[FORMATO DE SAÍDA]
-Forneça apenas o código Java completo e compilável da classe de teste,
-sem comentários ou explicações adicionais.
+[5] Requisitos
+- Não incluir comentários, explicações ou texto fora do código Java;
+- Nomes dos testes devem seguir o padrão: testNextPrime_*.
