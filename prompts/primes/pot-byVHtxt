@@ -10,7 +10,7 @@ Gerar testes unitários em Java (JUnit 5) para o método nextPrime(int n).Não g
 
 Gerar casos de teste apenas para o método nextPrime(int n). Não criar testes para outros métodos da classe.
 
-[3.1] Análise Estrutural Prévia do Método Alvo
+[3.1] Análise Estrutural Prévia do Método nextPrime(int n).
 
 O método nextPrime(int n) da classe Primes foi previamente analisado segundo critérios de teste estrutural baseados em fluxo de dados.
 Essa análise deve ser considerada como base obrigatória para a construção do Program-of-Thoughts.
