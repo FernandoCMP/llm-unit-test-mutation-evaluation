@@ -73,9 +73,10 @@ O JSON deve capturar:
 - mapeamento explícito entre caminhos e casos de teste planejados.
 
 Nesta etapa:
-- NÃO escreva código Java;
+- Gere exclusivamente um objeto JSON válido como saída da resposta do modelo;
+- O JSON é um artefato intermediário de raciocínio e NÃO faz parte da classe de testes;
 - NÃO escreva texto explicativo fora do JSON;
-- NÃO utilize comentários;
+- O código JSON dentro da classe de teste deve ser comentado com //;
 - NÃO gere ainda os casos de teste.
 
 [4.1] Estrutura esperada do Program-of-Thoughts (JSON)
