@@ -75,6 +75,9 @@ Convenções:
 - p_use: uso predicativo;
 - c_use: uso computacional;
 - path(Pi): caminho definição–uso livre de redefinição.
+- delta_state: representação explícita do estado semântico observável do método após uma ação relevante, indicando mudanças em variáveis, candidatos a retorno, efeitos de exceção
+ou conclusão de artefatos.Deve registrar apenas informações relevantes para derivação de cenários de teste, como: redefinição de variáveis, definição de return_candidate, 
+observable_return indefinido/definido ou finalização do conjunto de cenários de teste.
 
 Modelo do Chain of Code:
 
