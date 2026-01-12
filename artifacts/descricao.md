@@ -5,5 +5,5 @@ A pasta **`artifacts`** será organizada em **16 subdiretórios**, cada um corre
 - arquivo `pom.xml`, responsável pela configuração do projeto Maven;
 - diretório `src`, contendo o código-fonte da classe-alvo e as suítes de testes geradas;
 - diretório `prompts`, com as estratégias de engenharia de prompt utilizadas para a geração automatizada dos testes;
-- demais arquivos resultates da execução, validação e reprodutibilidade do experimento.
+- demais arquivos resultantes da execução, validação e reprodutibilidade do experimento.
 
