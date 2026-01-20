@@ -1,6 +1,6 @@
 ## Artifacts
 
-A pasta **`artifacts`** será organizada em **16 subdiretórios**, cada um correspondente a uma **classe-alvo** avaliada no estudo. Cada diretório representa um experimento independente e segue uma estrutura padronizada, incluindo, entre outros elementos:
+A pasta **`artifacts`** correspondente ao experimentos realizados para cada **classe-alvo** avaliada no estudo. Cada diretório representa um experimento independente e segue uma estrutura padronizada, incluindo, entre outros elementos:
 
 - arquivo `pom.xml`, responsável pela configuração do projeto Maven;
 - diretório `src`, contendo o código-fonte da classe-alvo e as suítes de testes geradas;
