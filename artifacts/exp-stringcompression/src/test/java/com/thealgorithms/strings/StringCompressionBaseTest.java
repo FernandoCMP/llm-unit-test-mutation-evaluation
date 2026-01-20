@@ -31,4 +31,3 @@ public class StringCompressionBaseTest {
         assertEquals("AB", result);
     }
 }
-
