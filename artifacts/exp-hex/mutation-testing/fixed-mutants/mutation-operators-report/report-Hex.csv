@@ -1,0 +1,10 @@
+class,mutant_id,operator_id,mutator,operator_type,method,line,transformation
+Hex,M001,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,encodeHex,109,changed conditional boundary
+Hex,M002,OP02,org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator,Arithmetic,encodeHex,110,Changed increment from 1 to -1
+Hex,M003,OP02,org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator,Arithmetic,encodeHex,111,Changed increment from 1 to -1
+Hex,M004,OP03,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,encodeHex,106,Replaced Shift Left with Shift Right
+Hex,M005,OP03,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,encodeHex,110,Replaced bitwise AND with OR
+Hex,M006,OP03,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,encodeHex,110,Replaced Unsigned Shift Right with Shift Left
+Hex,M007,OP03,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,encodeHex,111,Replaced bitwise AND with OR
+Hex,M008,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,encodeHex,109,if (cond)  →  if (!cond)
+Hex,M009,OP05,org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator,Null,encodeHex,114,replaced return value with null for org/apache/commons/codec/binary/Hex::encodeHex

@@ -1,0 +1,32 @@
+
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:5: error: class, interface, enum, or record expected
+public void testEncodeHex() {
+       ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:7: error: class, interface, enum, or record expected
+    String expected = "0123456789ABCDEF";
+    ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:8: error: class, interface, enum, or record expected
+    String actual = Hex.encodeHex(data);
+    ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:9: error: class, interface, enum, or record expected
+    assertEquals(expected, actual);
+    ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:10: error: class, interface, enum, or record expected
+}
+^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:13: error: class, interface, enum, or record expected
+public void testDecodeHex() {
+       ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:15: error: class, interface, enum, or record expected
+    String expected = "0123456789ABCDEF";
+    ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:16: error: class, interface, enum, or record expected
+    String actual = Hex.decodeHex(data);
+    ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:17: error: class, interface, enum, or record expected
+    assertEquals(expected, actual);
+    ^
+/app/experimentos/exp-hex/src/test/java/org/apache/commons/codec/binary/HexLlama_POT2Test.java:18: error: class, interface, enum, or record expected
+}
+^
+10 errors

@@ -1,0 +1,5 @@
+
+/app/experimentos/exp-area/src/test/java/com/thealgorithms/maths/AreaQwen_POT2Test.java:102: error: class, interface, enum, or record expected
+package com.thealgorithms.maths;
+^
+1 error
