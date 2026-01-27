@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-stringcompression,StringCompression,Grok,zero-shot,5,4570,5371,9941,0.000914,0.008056,0.008970,0.048079
+exp-stringcompression,StringCompression,Grok,one-shot,5,5130,4865,9995,0.001026,0.007298,0.008324,0.044617
+exp-stringcompression,StringCompression,Grok,few-shot,5,5450,6529,11979,0.001090,0.009794,0.010884,0.058338
+exp-stringcompression,StringCompression,Grok,pot,5,14940,3366,18306,0.002988,0.005049,0.008037,0.043078
+exp-stringcompression,StringCompression,Grok,coc,5,10985,7629,18614,0.002197,0.011444,0.013641,0.073116
+exp-stringcompression,StringCompression,Llama,zero-shot,5,3694,2046,5740,0.000554,0.001228,0.001782,0.009552
+exp-stringcompression,StringCompression,Llama,one-shot,5,4165,1391,5556,0.000625,0.000835,0.001460,0.007826
+exp-stringcompression,StringCompression,Llama,few-shot,5,4516,1515,6031,0.000677,0.000909,0.001586,0.008501
+exp-stringcompression,StringCompression,Llama,pot,5,14110,1249,15359,0.002116,0.000749,0.002865,0.015356
+exp-stringcompression,StringCompression,Llama,coc,5,10011,2030,12041,0.001502,0.001218,0.002720,0.014579
+exp-stringcompression,StringCompression,Qwen,zero-shot,5,3650,1704,5354,0.000803,0.001619,0.002422,0.012982
+exp-stringcompression,StringCompression,Qwen,one-shot,5,4235,1717,5952,0.000932,0.001631,0.002563,0.013738
+exp-stringcompression,StringCompression,Qwen,few-shot,5,4585,1672,6257,0.001009,0.001588,0.002597,0.013920
+exp-stringcompression,StringCompression,Qwen,pot,5,14460,767,15227,0.003181,0.000729,0.003910,0.020958
+exp-stringcompression,StringCompression,Qwen,coc,5,10375,1355,11730,0.002283,0.001287,0.003570,0.019135
+exp-stringcompression,StringCompression,TOTAL,ALL,75,114876,43206,158082,0.021897,0.053434,0.075331,0.403775
