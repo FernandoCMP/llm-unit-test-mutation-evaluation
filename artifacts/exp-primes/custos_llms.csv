@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-primes,Primes,Grok,zero-shot,5,6925,7427,14352,0.001385,0.011140,0.012525,0.067134
+exp-primes,Primes,Grok,one-shot,5,7500,12435,19935,0.001500,0.018652,0.020152,0.108015
+exp-primes,Primes,Grok,few-shot,5,8010,5604,13614,0.001602,0.008406,0.010008,0.053643
+exp-primes,Primes,Grok,pot,5,18005,13462,31467,0.003601,0.020193,0.023794,0.127536
+exp-primes,Primes,Grok,coc,5,12950,12414,25364,0.002590,0.018621,0.021211,0.113691
+exp-primes,Primes,Llama,zero-shot,5,6154,1531,7685,0.000923,0.000919,0.001842,0.009873
+exp-primes,Primes,Llama,one-shot,5,6704,1498,8202,0.001006,0.000899,0.001905,0.010211
+exp-primes,Primes,Llama,few-shot,5,7301,1425,8726,0.001095,0.000855,0.001950,0.010452
+exp-primes,Primes,Llama,pot,5,17129,2064,19193,0.002569,0.001238,0.003807,0.020406
+exp-primes,Primes,Llama,coc,5,12129,1510,13639,0.001819,0.000906,0.002725,0.014606
+exp-primes,Primes,Qwen,zero-shot,5,6065,2042,8107,0.001334,0.001940,0.003274,0.017549
+exp-primes,Primes,Qwen,one-shot,5,6665,1928,8593,0.001466,0.001832,0.003298,0.017677
+exp-primes,Primes,Qwen,few-shot,5,7180,1893,9073,0.001580,0.001798,0.003378,0.018106
+exp-primes,Primes,Qwen,pot,5,17705,2836,20541,0.003895,0.002694,0.006589,0.035317
+exp-primes,Primes,Qwen,coc,5,12570,1710,14280,0.002765,0.001624,0.004389,0.023525
+exp-primes,Primes,TOTAL,ALL,75,152992,69779,222771,0.029130,0.091717,0.120847,0.647741
