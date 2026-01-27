@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-fraction,Fraction,Grok,zero-shot,5,29590,8111,37701,0.005918,0.012167,0.018085,0.096936
+exp-fraction,Fraction,Grok,one-shot,5,30215,6020,36235,0.006043,0.009030,0.015073,0.080791
+exp-fraction,Fraction,Grok,few-shot,5,30760,4878,35638,0.006152,0.007317,0.013469,0.072194
+exp-fraction,Fraction,Grok,pot,5,38340,3392,41732,0.007668,0.005088,0.012756,0.068372
+exp-fraction,Fraction,Grok,coc,5,34390,7037,41427,0.006878,0.010555,0.017433,0.093441
+exp-fraction,Fraction,Llama,zero-shot,5,28720,2051,30771,0.004308,0.001231,0.005539,0.029689
+exp-fraction,Fraction,Llama,one-shot,5,29590,1852,31442,0.004438,0.001111,0.005549,0.029743
+exp-fraction,Fraction,Llama,few-shot,5,29885,1967,31852,0.004483,0.001180,0.005663,0.030354
+exp-fraction,Fraction,Llama,pot,5,37411,1371,38782,0.005612,0.000823,0.006435,0.034492
+exp-fraction,Fraction,Llama,coc,5,33458,1898,35356,0.005019,0.001139,0.006158,0.033007
+exp-fraction,Fraction,Qwen,zero-shot,5,28820,3799,32619,0.006340,0.003609,0.009949,0.053327
+exp-fraction,Fraction,Qwen,one-shot,5,29455,3614,33069,0.006480,0.003433,0.009913,0.053134
+exp-fraction,Fraction,Qwen,few-shot,5,30060,3433,33493,0.006613,0.003261,0.009874,0.052925
+exp-fraction,Fraction,Qwen,pot,5,38145,1521,39666,0.008392,0.001445,0.009837,0.052726
+exp-fraction,Fraction,Qwen,coc,5,34030,2138,36168,0.007487,0.002031,0.009518,0.051016
+exp-fraction,Fraction,TOTAL,ALL,75,482869,53082,535951,0.091831,0.063420,0.155251,0.832147

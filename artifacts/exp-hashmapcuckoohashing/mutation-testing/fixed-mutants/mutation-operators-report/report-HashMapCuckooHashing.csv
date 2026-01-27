@@ -1,0 +1,20 @@
+class,mutant_id,operator_id,mutator,operator_type,method,line,transformation
+HashMapCuckooHashing,M001,OP01,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,<init>,32,x / y  →  x * y
+HashMapCuckooHashing,M002,OP01,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,<init>,32,x + y  →  x - y
+HashMapCuckooHashing,M003,OP02,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,insertKey2HashTable,82,changed conditional boundary
+HashMapCuckooHashing,M004,OP03,org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator,Arithmetic,insertKey2HashTable,83,Changed increment from 1 to -1
+HashMapCuckooHashing,M005,OP01,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,insertKey2HashTable,88,x + y  →  x - y
+HashMapCuckooHashing,M006,OP01,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,insertKey2HashTable,99,x + y  →  x - y
+HashMapCuckooHashing,M007,OP01,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,insertKey2HashTable,104,x + y  →  x - y
+HashMapCuckooHashing,M008,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,73,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M009,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,78,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M010,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,82,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M011,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,86,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M012,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,86,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M013,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,97,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M014,OP04,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,insertKey2HashTable,102,if (cond)  →  if (!cond)
+HashMapCuckooHashing,M015,OP05,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,Logical,insertKey2HashTable,74,removed call to java/io/PrintStream::println
+HashMapCuckooHashing,M016,OP05,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,Logical,insertKey2HashTable,75,removed call to com/thealgorithms/datastructures/hashmap/hashing/HashMapCuckooHashing::reHashTableIncreasesTableSize
+HashMapCuckooHashing,M017,OP05,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,Logical,insertKey2HashTable,113,removed call to java/io/PrintStream::println
+HashMapCuckooHashing,M018,OP05,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,Logical,insertKey2HashTable,114,removed call to com/thealgorithms/datastructures/hashmap/hashing/HashMapCuckooHashing::reHashTableIncreasesTableSize
+HashMapCuckooHashing,M019,OP05,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,Logical,insertKey2HashTable,115,removed call to com/thealgorithms/datastructures/hashmap/hashing/HashMapCuckooHashing::insertKey2HashTable

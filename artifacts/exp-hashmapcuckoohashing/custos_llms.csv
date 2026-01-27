@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Grok,zero-shot,5,11190,7421,18611,0.002238,0.011131,0.013369,0.071658
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Grok,one-shot,5,11865,6002,17867,0.002373,0.009003,0.011376,0.060975
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Grok,few-shot,5,12760,6163,18923,0.002552,0.009244,0.011796,0.063227
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Grok,pot,5,22860,7249,30109,0.004572,0.010874,0.015446,0.082791
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Grok,coc,5,17355,7603,24958,0.003471,0.011405,0.014876,0.079735
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Llama,zero-shot,5,10287,2516,12803,0.001543,0.001510,0.003053,0.016364
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Llama,one-shot,5,11099,2311,13410,0.001665,0.001387,0.003052,0.016359
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Llama,few-shot,5,12034,2593,14627,0.001805,0.001556,0.003361,0.018015
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Llama,pot,5,21929,2380,24309,0.003289,0.001428,0.004717,0.025283
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Llama,coc,5,16544,2301,18845,0.002482,0.001381,0.003863,0.020706
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Qwen,zero-shot,5,10015,2904,12919,0.002203,0.002759,0.004962,0.026596
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Qwen,one-shot,5,10710,3247,13957,0.002356,0.003085,0.005441,0.029164
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Qwen,few-shot,5,11615,3814,15429,0.002555,0.003623,0.006178,0.033114
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Qwen,pot,5,22180,3399,25579,0.004880,0.003229,0.008109,0.043464
+exp-hashmapcuckoohashing,HashMapCuckooHashing,Qwen,coc,5,16500,2994,19494,0.003630,0.002844,0.006474,0.034701
+exp-hashmapcuckoohashing,HashMapCuckooHashing,TOTAL,ALL,75,218943,62897,281840,0.041614,0.074459,0.116073,0.622152
