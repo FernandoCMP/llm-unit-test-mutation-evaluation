@@ -1,7 +1,0 @@
-
-/app/experimentos/exp-primes-dissertacao/src/test/java/org/apache/commons/math3/primes/PrimesGrok_POT1Test.java:12: error: cannot find symbol
-        assertThrows(MathIllegalArgumentException.class, () -> Primes.nextPrime(-1));
-                     ^
-  symbol:   class MathIllegalArgumentException
-  location: class PrimesGrok_POT1Test
-1 error
