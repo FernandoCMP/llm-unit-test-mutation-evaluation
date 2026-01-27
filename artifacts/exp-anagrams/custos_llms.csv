@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-anagrams,Anagrams,Llama,zero-shot,5,7547,1955,9502,0.001132,0.001173,0.002305,0.012355
+exp-anagrams,Anagrams,Qwen,zero-shot,5,7570,2506,10076,0.001665,0.002381,0.004046,0.021687
+exp-anagrams,Anagrams,Grok,zero-shot,5,8510,5867,14377,0.001702,0.008800,0.010502,0.056291
+exp-anagrams,Anagrams,Grok,one-shot,5,9145,5181,14326,0.001829,0.007771,0.009600,0.051456
+exp-anagrams,Anagrams,Qwen,one-shot,5,8210,2187,10397,0.001806,0.002078,0.003884,0.020818
+exp-anagrams,Anagrams,Llama,one-shot,5,8238,1909,10147,0.001236,0.001145,0.002381,0.012762
+exp-anagrams,Anagrams,Llama,few-shot,5,8798,1994,10792,0.001320,0.001196,0.002516,0.013486
+exp-anagrams,Anagrams,Qwen,few-shot,5,8755,2333,11088,0.001926,0.002216,0.004142,0.022201
+exp-anagrams,Anagrams,Grok,few-shot,5,9670,4723,14393,0.001934,0.007084,0.009018,0.048336
+exp-anagrams,Anagrams,Grok,pot,5,16560,7213,23773,0.003312,0.010819,0.014131,0.075742
+exp-anagrams,Anagrams,Grok,coc,5,14925,2372,17297,0.002985,0.003558,0.006543,0.035070
+exp-anagrams,Anagrams,Qwen,pot,5,16082,3360,19442,0.003538,0.003192,0.006730,0.036073
+exp-anagrams,Anagrams,Qwen,coc,5,14490,875,15365,0.003188,0.000831,0.004019,0.021542
+exp-anagrams,Anagrams,Llama,pot,5,15485,5044,20529,0.002323,0.003026,0.005349,0.028671
+exp-anagrams,Anagrams,Llama,coc,5,13973,956,14929,0.002096,0.000574,0.002670,0.014311
+exp-anagrams,Anagrams,TOTAL,ALL,75,167958,48475,216433,0.031992,0.055844,0.087836,0.470801

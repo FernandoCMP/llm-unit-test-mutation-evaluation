@@ -1,0 +1,12 @@
+class,mutant_id,operator_id,mutator,operator_type,method,line,transformation
+Anagrams,M001,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,approach2,75,changed conditional boundary
+Anagrams,M002,OP02,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,approach2,66,x - y  →  x + y
+Anagrams,M003,OP02,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,approach2,66,x + y  →  x - y
+Anagrams,M004,OP02,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,approach2,73,x - y  →  x + y
+Anagrams,M005,OP02,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Arithmetic,approach2,73,x + y  →  x - y
+Anagrams,M006,OP03,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,approach2,60,if (cond)  →  if (!cond)
+Anagrams,M007,OP03,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,approach2,75,if (cond)  →  if (!cond)
+Anagrams,M008,OP03,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,approach2,76,if (cond)  →  if (!cond)
+Anagrams,M009,OP04,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator,Other,approach2,80,replaced boolean return with false for com/thealgorithms/strings/Anagrams::approach2
+Anagrams,M010,OP05,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator,Other,approach2,61,replaced boolean return with true for com/thealgorithms/strings/Anagrams::approach2
+Anagrams,M011,OP05,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator,Other,approach2,77,replaced boolean return with true for com/thealgorithms/strings/Anagrams::approach2

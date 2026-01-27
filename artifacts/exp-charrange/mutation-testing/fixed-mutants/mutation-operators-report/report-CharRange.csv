@@ -1,0 +1,23 @@
+class,mutant_id,operator_id,mutator,operator_type,method,line,transformation
+CharRange,M001,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,contains,189,changed conditional boundary
+CharRange,M002,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,contains,189,changed conditional boundary
+CharRange,M003,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,contains,191,changed conditional boundary
+CharRange,M004,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,contains,191,changed conditional boundary
+CharRange,M005,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,contains,196,changed conditional boundary
+CharRange,M006,OP01,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,Relational,contains,196,changed conditional boundary
+CharRange,M007,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,184,if (cond)  →  if (!cond)
+CharRange,M008,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,187,if (cond)  →  if (!cond)
+CharRange,M009,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,188,if (cond)  →  if (!cond)
+CharRange,M010,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,189,if (cond)  →  if (!cond)
+CharRange,M011,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,189,if (cond)  →  if (!cond)
+CharRange,M012,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,191,if (cond)  →  if (!cond)
+CharRange,M013,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,191,if (cond)  →  if (!cond)
+CharRange,M014,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,193,if (cond)  →  if (!cond)
+CharRange,M015,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,194,if (cond)  →  if (!cond)
+CharRange,M016,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,194,if (cond)  →  if (!cond)
+CharRange,M017,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,196,if (cond)  →  if (!cond)
+CharRange,M018,OP02,org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator,Relational,contains,196,if (cond)  →  if (!cond)
+CharRange,M019,OP03,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator,Other,contains,189,replaced boolean return with true for org/apache/commons/lang3/CharRange::contains
+CharRange,M020,OP03,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator,Other,contains,191,replaced boolean return with true for org/apache/commons/lang3/CharRange::contains
+CharRange,M021,OP03,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator,Other,contains,194,replaced boolean return with true for org/apache/commons/lang3/CharRange::contains
+CharRange,M022,OP03,org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator,Other,contains,196,replaced boolean return with true for org/apache/commons/lang3/CharRange::contains

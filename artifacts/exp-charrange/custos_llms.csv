@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-charrange,CharRange,Grok,zero-shot,5,14185,7708,21893,0.002837,0.011562,0.014399,0.077179
+exp-charrange,CharRange,Grok,one-shot,5,14910,6171,21081,0.002982,0.009257,0.012239,0.065601
+exp-charrange,CharRange,Grok,few-shot,5,15580,7498,23078,0.003116,0.011247,0.014363,0.076986
+exp-charrange,CharRange,Grok,pot,5,23390,5881,29271,0.004678,0.008821,0.013499,0.072355
+exp-charrange,CharRange,Grok,coc,5,19100,5948,25048,0.003820,0.008922,0.012742,0.068297
+exp-charrange,CharRange,Llama,zero-shot,5,13511,3291,16802,0.002027,0.001975,0.004002,0.021451
+exp-charrange,CharRange,Llama,one-shot,5,14144,3221,17365,0.002122,0.001933,0.004055,0.021735
+exp-charrange,CharRange,Llama,few-shot,5,14834,2937,17771,0.002225,0.001762,0.003987,0.021370
+exp-charrange,CharRange,Llama,pot,5,22532,2966,25498,0.003380,0.001780,0.005160,0.027658
+exp-charrange,CharRange,Llama,coc,5,18540,2686,21226,0.002781,0.001612,0.004393,0.023546
+exp-charrange,CharRange,Qwen,zero-shot,5,13230,6371,19601,0.002911,0.006052,0.008963,0.048042
+exp-charrange,CharRange,Qwen,one-shot,5,13960,5395,19355,0.003071,0.005125,0.008196,0.043931
+exp-charrange,CharRange,Qwen,few-shot,5,14645,5772,20417,0.003222,0.005483,0.008705,0.046659
+exp-charrange,CharRange,Qwen,pot,5,23145,3132,26277,0.005092,0.002975,0.008067,0.043239
+exp-charrange,CharRange,Qwen,coc,5,18670,2820,21490,0.004107,0.002679,0.006786,0.036373
+exp-charrange,CharRange,TOTAL,ALL,75,254376,71797,326173,0.048371,0.081185,0.129556,0.694422

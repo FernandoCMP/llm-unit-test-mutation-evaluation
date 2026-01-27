@@ -1,0 +1,17 @@
+experiment,class,model,prompt_strategy,total_suites,prompt_tokens,completion_tokens,total_tokens,cost_prompt_usd,cost_completion_usd,cost_total_usd,cost_total_brl
+exp-charsetutils,CharSetUtils,Grok,zero-shot,5,12585,4974,17559,0.002517,0.007461,0.009978,0.053482
+exp-charsetutils,CharSetUtils,Grok,one-shot,5,13195,5233,18428,0.002639,0.007849,0.010488,0.056216
+exp-charsetutils,CharSetUtils,Grok,few-shot,5,13605,4952,18557,0.002721,0.007428,0.010149,0.054399
+exp-charsetutils,CharSetUtils,Grok,pot,5,23785,263390,287175,0.004757,0.395085,0.399842,2.143153
+exp-charsetutils,CharSetUtils,Grok,coc,5,18945,5086,24031,0.003789,0.007629,0.011418,0.061200
+exp-charsetutils,CharSetUtils,Llama,zero-shot,5,11632,1743,13375,0.001745,0.001046,0.002791,0.014960
+exp-charsetutils,CharSetUtils,Llama,one-shot,5,12225,1650,13875,0.001834,0.000990,0.002824,0.015137
+exp-charsetutils,CharSetUtils,Llama,few-shot,5,12660,1887,14547,0.001899,0.001132,0.003031,0.016246
+exp-charsetutils,CharSetUtils,Llama,pot,5,22740,6320,29060,0.003411,0.003792,0.007203,0.038608
+exp-charsetutils,CharSetUtils,Llama,coc,5,18053,1784,19837,0.002708,0.001070,0.003778,0.020250
+exp-charsetutils,CharSetUtils,Qwen,zero-shot,5,11290,2760,14050,0.002484,0.002622,0.005106,0.027368
+exp-charsetutils,CharSetUtils,Qwen,one-shot,5,11905,2673,14578,0.002619,0.002539,0.005158,0.027647
+exp-charsetutils,CharSetUtils,Qwen,few-shot,5,12335,2386,14721,0.002714,0.002267,0.004981,0.026698
+exp-charsetutils,CharSetUtils,Qwen,pot,5,23040,10416,33456,0.005069,0.009895,0.014964,0.080207
+exp-charsetutils,CharSetUtils,Qwen,coc,5,18070,2065,20135,0.003975,0.001962,0.005937,0.031822
+exp-charsetutils,CharSetUtils,TOTAL,ALL,75,236065,317319,553384,0.044881,0.452767,0.497648,2.667393
